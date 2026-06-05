@@ -1,4 +1,4 @@
-# 🌐 The 5 Prompts I Used to Build My Website with AI
+# 🌐 The Prompts I Used to Plan & Build a Website with AI
 
 > From the BuiltWithSpring YouTube series — *"I Vibe Coded My Website in Under 2 Hours"*
 >
@@ -7,58 +7,98 @@
 
 ---
 
-No coding background. No developer. One Sunday afternoon.
+No coding background. No developer. No agency. One Sunday afternoon.
 
-These are the exact 5 prompts I used — cleaned up and ready for you to steal. Swap in your own project details wherever you see `[brackets]`.
-
----
-
-## Prompt 1 — The Options Prompt
-*Use this before you build anything. Never start without a plan.*
-
-```
-I want to build [describe your project in one sentence].
-
-Before we start, give me 3 different approaches I could take.
-For each one, compare:
-- The tools required
-- Time it would take
-- Technical complexity
-- What you'd recommend for someone with no coding background
-
-Ask me any clarifying questions you need before answering.
-```
+These are the exact prompts — split into two phases: **Planning** (Claude.ai) and **Building** (Claude Code). Swap in your own business details wherever you see `[brackets]`.
 
 ---
 
-## Prompt 2 — The Expertise Hat + Brand Discovery Prompt
-*Give AI a role before you let it design anything. The quality difference is night and day.*
+## PHASE 1 — PLANNING (Use in Claude.ai)
+
+These prompts happen in a regular Claude chat before you touch any code.
+Think of this as your strategy and design session.
+
+---
+
+### Prompt 1 — The Kickoff Prompt
+*The very first thing you send. Sets the expertise level for the entire session.*
 
 ```
-You are a senior UX designer and brand strategist.
+I need to build a website for [my business / a client's business].
 
-I want to build a website for [describe your purpose and target audience].
+You are a senior UX designer, brand strategist, and conversion
+specialist with 15 years of experience building sites for
+premium consumer brands.
 
-Before designing anything, ask me 5–7 questions to understand:
-- My goals for the site
-- My target audience
-- The visual vibe I'm going for
-- What I want visitors to feel in the first 3 seconds
+Before you design anything or make any recommendations, ask me
+5-7 questions to understand:
+- The business, what it sells, and who buys it
+- The brand personality and visual vibe
+- What the site needs to DO (sell, book, inform, build trust?)
+- Who the target customer is and what they care about
+- 2-3 example sites the client loves and why
+- What success looks like 90 days after launch
 
-Give me multiple choice options where possible so it's easy to answer.
+Give me multiple choice options where possible so my answers
+are fast and specific.
+
+Once I've answered, give me 3 distinct design directions — not
+just color options, but full creative concepts with different
+visual personalities, layouts, and emotional tones. For each
+one tell me: the vibe, the tech approach, the standout feature,
+and which type of customer it would convert best.
+
+Then ask me which direction I want to pursue before building
+anything.
 ```
 
 ---
 
-## Prompt 3 — The Brief Handoff Prompt
-*Use this when you move from planning into Claude Code (or any AI builder). Give it blueprints, not vibes.*
+### Prompt 2 — The Competitive Research Prompt
+*Run this before or after the discovery questions. Gets AI to think strategically about your market.*
+
+```
+Before we finalize the design direction, research 5 high-end
+[your industry] brands and analyze their websites.
+
+For each one tell me:
+- The visual style
+- The conversion strategy
+- What they do exceptionally well
+- One thing you'd improve
+
+Then tell me where [my business name] has a gap in the market
+it could own visually.
+```
+
+---
+
+### Prompt 3 — The Positioning Punch Prompt
+*Gets you a hero headline that actually converts.*
+
+```
+Based on everything we've discussed, write a one-sentence brand
+positioning statement for [business name] that would work as a
+hero headline on the website.
+
+Give me 5 options ranging from witty to premium to emotionally
+resonant.
+
+Then tell me which one you'd A/B test first and why.
+```
+
+---
+
+### Prompt 4 — The Brief Handoff Prompt
+*Use this to hand off from Claude.ai planning to Claude Code building.
+This is the most important prompt — it's the blueprint your builder works from.*
 
 ```
 I have a project brief for this build. Read it completely.
-Also read [list any reference files — e.g. design spec, brand kit, example sites]
-for visual and brand reference.
+Also read [list any reference files — e.g. design spec, brand
+kit, example sites] for visual reference.
 
-Once you've read everything, produce a detailed site plan including:
+Once you've read everything, produce a detailed site plan:
 - Tech stack recommendation
 - File structure
 - Component breakdown
@@ -69,62 +109,124 @@ Do not write any code until I approve the plan.
 
 ---
 
-## Prompt 4 — The Error Recovery Prompt
+## PHASE 2 — BUILDING (Use in Claude Code)
+
+These prompts happen inside Claude Code terminal after your plan is approved.
+
+---
+
+### Prompt 5 — The Error Recovery Prompt
 *When things break — and they will — you don't need to understand the error. You just need this.*
 
 ```
-I got this error: [paste the error text, or describe what happened and what you were doing]
+I got this error: [paste the error text or describe what
+happened and what you were doing].
 
 I have no technical background.
 
-Tell me exactly what to type to fix it, in order, one step at a time.
-Don't explain what it means — just tell me what to do.
+Tell me exactly what to type to fix it, in order, one step
+at a time. Don't explain what it means — just tell me what
+to do.
 ```
 
 ---
 
-## Prompt 5 — The Grading Rubric Prompt
-*The most valuable prompt in this whole set. Most people skip this. Don't.*
+## PHASE 3 — QUALITY (Use in Claude.ai after the build)
+
+Run these after the site is built but before you launch.
+This is the Iterative Quality Loop — the move most people skip.
+
+---
+
+### Prompt 6 — Build the Grading Rubric First
+*Never ask "is this good?" Ask AI to define what good means — then grade against it.*
 
 ```
-Before you grade my site, I want you to first build the grading rubric.
+Before you grade my site, I want you to first build the
+grading rubric.
 
 Include these categories:
-- Visual design
-- Conversion architecture
-- Brand consistency
-- UX and copywriting
-- Technical quality
-- How well it communicates that I'm a trustworthy professional in [your field]
+- Visual design and brand consistency
+- Hero section effectiveness (first 3 seconds)
+- Conversion architecture (is it easy to buy / book / contact?)
+- Product or service presentation
+- Mobile experience
+- Brand voice and copywriting
+- Trust signals and social proof
+- Technical performance considerations
 
 Weight each category by importance.
 
-Once I approve the rubric, grade my site against it and tell me exactly
-what to fix for anything that scores below 80%.
+Once I approve the rubric, grade my site against it and tell
+me exactly what to fix for anything that scores below 7 out
+of 10.
 ```
 
 ---
 
-## How I Used These (The Order Matters)
+### Prompt 7 — The Honest Roast Prompt
+*Gets the most actionable feedback. Don't skip this one.*
 
-1. **Prompt 1** → Get a plan before touching anything
-2. **Prompt 2** → Let AI ask *you* questions to build a brand direction
-3. **Prompt 3** → Hand the brief to Claude Code with a clear build plan
-4. **Prompt 4** → Repeat as needed when errors appear (spoiler: they will)
-5. **Prompt 5** → Run this before you call it done — then fix what it finds, then run it again
+```
+Now I want you to be brutally honest. Forget being nice.
 
-I ran the Prompt 5 loop twice. The site you see at builtwithspring.com is version 3.
+If a senior creative director at a luxury brand agency
+reviewed this site cold, what would they say in the first
+60 seconds?
+
+What would make them wince? What would make them nod?
+
+Give me the unfiltered version.
+```
 
 ---
 
-## Tools Used in This Build
+### Prompt 8 — The Priority Fix Prompt
+*Turns the feedback into an action plan.*
 
-| Tool | Purpose | Cost |
-|------|---------|------|
-| [Claude.ai](https://claude.ai) | Planning, design, brand discovery | $20/mo (Pro) |
-| [Claude Code](https://claude.ai/download) | Building the actual site | Included with Pro |
+```
+Based on everything you just flagged, give me the top 3
+highest-impact fixes I should make before launch — ranked
+by how much each one would move conversion.
+
+For each fix tell me:
+- What to change
+- Why it matters
+- The exact prompt I should give Claude Code to implement it
+```
+
+---
+
+## How to Use These (The Order Matters)
+
+**Planning phase (Claude.ai):**
+1. Prompt 1 → Kickoff + discovery questions
+2. Prompt 2 → Competitive research (optional but powerful)
+3. Prompt 3 → Hero headline options
+4. Prompt 4 → Brief handoff to Claude Code
+
+**Building phase (Claude Code):**
+5. Prompt 5 → Repeat as needed when errors appear
+
+**Quality phase (Claude.ai):**
+6. Prompt 6 → Build the rubric
+7. Prompt 7 → The honest roast
+8. Prompt 8 → Priority fix list
+
+Then take the fixes back into Claude Code, implement them,
+and run the quality loop again. I ran it twice.
+The site you see at builtwithspring.com is version 3.
+
+---
+
+## The Two Tools You Need
+
+| Tool | What It Does | Cost |
+|------|-------------|------|
+| [Claude.ai](https://claude.ai) | Planning, strategy, design, quality review | Free / $20/mo Pro |
+| [Claude Code](https://claude.ai/download) | Actually builds and runs the code | Included with Pro |
 | [GitHub](https://github.com) | Version control | Free |
-| [Vercel](https://vercel.com) | Deployment | Free |
+| [Vercel](https://vercel.com) | Deployment (makes it live) | Free |
 | [Cloudflare](https://cloudflare.com/products/registrar) | Domain registrar | ~$10/yr |
 
 **Total cost to launch: ~$10.46 + one Sunday afternoon.**
@@ -133,7 +235,8 @@ I ran the Prompt 5 loop twice. The site you see at builtwithspring.com is versio
 
 ## More from BuiltWithSpring
 
-I build AI tools that solve real problems and share every build as a tutorial.
+I build AI tools that solve real problems and share every
+build as a tutorial — for people with no technical background.
 
 - 🌐 [builtwithspring.com](https://builtwithspring.com)
 - 📺 YouTube: [@BuiltWithSpring](https://youtube.com/@BuiltWithSpring)
@@ -142,4 +245,4 @@ I build AI tools that solve real problems and share every build as a tutorial.
 
 ---
 
-*Found this useful? Star the repo and share it with someone who's been quoted $5k for a website.*
+*Found this useful? Star the repo — and tell me what you built.*
