@@ -1,6 +1,7 @@
 # 🌐 The Prompts I Used to Plan & Build a Website with AI
 
-> From the BuiltWithSpring YouTube series — *"I Vibe Coded My Website in Under 2 Hours"*
+> From the BuiltWithSpring YouTube series
+> *"Stop paying developers. I built my business website with AI in 2 hours."*
 >
 > 📺 Watch the video: [link coming soon]
 > 🌐 See the finished site: [builtwithspring.com](https://builtwithspring.com)
@@ -8,23 +9,30 @@
 ---
 
 No coding background. No developer. No agency. One Sunday afternoon.
+Total cost: $10.46.
 
-These are the exact prompts — split into two phases: **Planning** (Claude.ai) and **Building** (Claude Code). Swap in your own business details wherever you see `[brackets]`.
+These are the exact prompts — split into three phases that match
+the video. Swap in your own business details wherever you see `[brackets]`.
+
+**Phase 1 — Planning** runs in Claude.ai (the regular chat).
+**Phase 2 — Building** runs in Claude Code (the terminal builder).
+**Phase 3 — Quality** runs back in Claude.ai before you launch.
 
 ---
 
-## PHASE 1 — PLANNING (Use in Claude.ai)
-
-These prompts happen in a regular Claude chat before you touch any code.
-Think of this as your strategy and design session.
+## PHASE 1 — PLANNING
+*Use these in Claude.ai before you touch any building tools.*
+*This is your strategy and design session. Don't skip it.*
 
 ---
 
-### Prompt 1 — The Kickoff Prompt
-*The very first thing you send. Sets the expertise level for the entire session.*
+### Prompt 1 — The Kickoff Prompt (Role Prompting)
+*The very first thing you send. Gives AI an expertise hat before it
+touches anything. The difference between a generic site and one that
+actually looks like your business.*
 
 ```
-I need to build a website for [my business / a client's business].
+I need to build a website for [describe your business in one sentence].
 
 You are a senior UX designer, brand strategist, and conversion
 specialist with 15 years of experience building sites for
@@ -36,7 +44,7 @@ Before you design anything or make any recommendations, ask me
 - The brand personality and visual vibe
 - What the site needs to DO (sell, book, inform, build trust?)
 - Who the target customer is and what they care about
-- 2-3 example sites the client loves and why
+- 2-3 example sites I love and why
 - What success looks like 90 days after launch
 
 Give me multiple choice options where possible so my answers
@@ -55,7 +63,8 @@ anything.
 ---
 
 ### Prompt 2 — The Competitive Research Prompt
-*Run this before or after the discovery questions. Gets AI to think strategically about your market.*
+*Optional but powerful. Gets AI to think strategically about your
+market before designing anything.*
 
 ```
 Before we finalize the design direction, research 5 high-end
@@ -73,8 +82,8 @@ it could own visually.
 
 ---
 
-### Prompt 3 — The Positioning Punch Prompt
-*Gets you a hero headline that actually converts.*
+### Prompt 3 — The Hero Headline Prompt
+*Gets you a homepage headline that actually converts.*
 
 ```
 Based on everything we've discussed, write a one-sentence brand
@@ -89,9 +98,10 @@ Then tell me which one you'd A/B test first and why.
 
 ---
 
-### Prompt 4 — The Brief Handoff Prompt
+### Prompt 4 — The Brief Handoff Prompt (Context Front-Loading)
 *Use this to hand off from Claude.ai planning to Claude Code building.
-This is the most important prompt — it's the blueprint your builder works from.*
+This is the blueprint your builder works from. Do not skip this —
+it's the difference between a clean build and a chaotic one.*
 
 ```
 I have a project brief for this build. Read it completely.
@@ -109,14 +119,32 @@ Do not write any code until I approve the plan.
 
 ---
 
-## PHASE 2 — BUILDING (Use in Claude Code)
+### Prompt 4B — The Setup Prompt
+*Run this in Claude.ai BEFORE opening Claude Code for the first time.
+This generates step-by-step setup instructions written in plain English
+for your specific machine. You will not need to Google anything.*
 
-These prompts happen inside Claude Code terminal after your plan is approved.
+```
+Walk me through exactly how to set up everything I need to
+build this site, step by step, for a Mac with no technical
+background.
+
+Include every tool, every file, and every command I need to
+type. Write it in plain English. Number every step.
+```
+
+---
+
+## PHASE 2 — BUILDING
+*Use this inside Claude Code terminal after your plan is approved.*
+*When Claude Code is running — let it run. It problem-solves on its
+own. It will ask you when it needs you. Until then: let it cook.*
 
 ---
 
 ### Prompt 5 — The Error Recovery Prompt
-*When things break — and they will — you don't need to understand the error. You just need this.*
+*When things break — and they will — you don't need to understand
+the error. You just need this prompt.*
 
 ```
 I got this error: [paste the error text or describe what
@@ -131,15 +159,15 @@ to do.
 
 ---
 
-## PHASE 3 — QUALITY (Use in Claude.ai after the build)
-
-Run these after the site is built but before you launch.
-This is the Iterative Quality Loop — the move most people skip.
+## PHASE 3 — QUALITY
+*Run these in Claude.ai after the site is built but before you launch.*
+*This is the Iterative Quality Loop — the move most people skip.*
+*Don't ask "is this good?" Ask AI to define what good means — then grade.*
 
 ---
 
 ### Prompt 6 — Build the Grading Rubric First
-*Never ask "is this good?" Ask AI to define what good means — then grade against it.*
+*Always build the rubric before you grade. Never the other way around.*
 
 ```
 Before you grade my site, I want you to first build the
@@ -164,13 +192,13 @@ of 10.
 
 ---
 
-### Prompt 7 — The Honest Roast Prompt
-*Gets the most actionable feedback. Don't skip this one.*
+### Prompt 7 — The Honest Roast
+*Gets the most actionable feedback. AI will not hold back.*
 
 ```
 Now I want you to be brutally honest. Forget being nice.
 
-If a senior creative director at a luxury brand agency
+If a senior creative director at a top brand agency
 reviewed this site cold, what would they say in the first
 60 seconds?
 
@@ -181,8 +209,8 @@ Give me the unfiltered version.
 
 ---
 
-### Prompt 8 — The Priority Fix Prompt
-*Turns the feedback into an action plan.*
+### Prompt 8 — The Priority Fix List
+*Turns the feedback into a ranked action plan with implementation prompts.*
 
 ```
 Based on everything you just flagged, give me the top 3
@@ -197,46 +225,50 @@ For each fix tell me:
 
 ---
 
-## How to Use These (The Order Matters)
+## The Full Order (Don't Skip Steps)
 
-**Planning phase (Claude.ai):**
-1. Prompt 1 → Kickoff + discovery questions
+**Phase 1 — Planning (Claude.ai):**
+1. Prompt 1 → Kickoff + discovery questions (Role Prompting)
 2. Prompt 2 → Competitive research (optional but powerful)
 3. Prompt 3 → Hero headline options
-4. Prompt 4 → Brief handoff to Claude Code
+4. Prompt 4 → Brief handoff to Claude Code (Context Front-Loading)
+5. Prompt 4B → Setup instructions for your machine
 
-**Building phase (Claude Code):**
-5. Prompt 5 → Repeat as needed when errors appear
+**Phase 2 — Building (Claude Code):**
+6. Prompt 5 → Use as needed when errors appear
+   *Important: let Claude Code run without interrupting it.*
+   *It problem-solves on its own. Let it cook.*
 
-**Quality phase (Claude.ai):**
-6. Prompt 6 → Build the rubric
-7. Prompt 7 → The honest roast
-8. Prompt 8 → Priority fix list
+**Phase 3 — Quality (Claude.ai):**
+7. Prompt 6 → Build the grading rubric
+8. Prompt 7 → The honest roast
+9. Prompt 8 → Priority fix list
 
-Then take the fixes back into Claude Code, implement them,
+Take the fixes back into Claude Code, implement them,
 and run the quality loop again. I ran it twice.
 The site you see at builtwithspring.com is version 3.
 
 ---
 
-## The Two Tools You Need
+## The Two Tools + What They Do
 
-| Tool | What It Does | Cost |
-|------|-------------|------|
-| [Claude.ai](https://claude.ai) | Planning, strategy, design, quality review | Free / $20/mo Pro |
-| [Claude Code](https://claude.ai/download) | Actually builds and runs the code | Included with Pro |
+| Tool | Role | Cost |
+|------|------|------|
+| [Claude.ai](https://claude.ai) | Planning, design, quality review — the architect | Free / $20/mo Pro |
+| [Claude Code](https://claude.ai/download) | Builds and runs the actual code — the construction crew | Included with Pro |
 | [GitHub](https://github.com) | Version control | Free |
-| [Vercel](https://vercel.com) | Deployment (makes it live) | Free |
+| [Vercel](https://vercel.com) | Deploys your site live | Free |
 | [Cloudflare](https://cloudflare.com/products/registrar) | Domain registrar | ~$10/yr |
 
 **Total cost to launch: ~$10.46 + one Sunday afternoon.**
+*(A developer would have charged $5,000–$10,000 for the same result.)*
 
 ---
 
 ## More from BuiltWithSpring
 
-I build AI tools that solve real problems and share every
-build as a tutorial — for people with no technical background.
+I build AI tools that solve real problems for small business owners
+and share every build as a free tutorial — no coding background required.
 
 - 🌐 [builtwithspring.com](https://builtwithspring.com)
 - 📺 YouTube: [@BuiltWithSpring](https://youtube.com/@BuiltWithSpring)
@@ -245,4 +277,5 @@ build as a tutorial — for people with no technical background.
 
 ---
 
-*Found this useful? Star the repo — and tell me what you built.*
+*Found this useful? Star the repo and drop your business name
+in the YouTube comments — I'll tell you which design direction I'd take it.*
