@@ -120,17 +120,19 @@ Do not write any code until I approve the plan.
 ---
 
 ### Prompt 4B — The Setup Prompt
-*Run this in Claude.ai BEFORE opening Claude Code for the first time.
-This generates step-by-step setup instructions written in plain English
-for your specific machine. You will not need to Google anything.*
+*Important: specify your hosting stack before running this prompt. The setup steps will be different depending on where your site lives. If you're following along with this video, copy the prompt exactly as written — it matches the stack used to build builtwithspring.com." Run this in Claude.ai BEFORE opening Claude Code for the first time.*
 
 ```
-Walk me through exactly how to set up everything I need to
-build this site, step by step, for a Mac with no technical
-background.
+This is my first time using Claude Code on my Mac.
+I have no technical background.
 
-Include every tool, every file, and every command I need to
-type. Write it in plain English. Number every step.
+I want to build a website using Next.js, deploy it
+on Vercel, and host the code on GitHub.
+
+Walk me through exactly how to set up everything
+I need to get started — every tool, every install,
+every command — in plain English, numbered step
+by step. Don't skip anything.
 ```
 
 ---
