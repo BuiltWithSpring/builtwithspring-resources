@@ -1,4 +1,4 @@
-# 🌐 The Prompts I Used to Plan & Build a Website with AI
+# 🌐 The 9 Prompts I Used to Plan & Build a Website with AI
 
 > From the BuiltWithSpring YouTube series
 > *"Stop paying developers. I built my business website with AI in 2 hours."*
@@ -11,25 +11,31 @@
 No coding background. No developer. No agency. One Sunday afternoon.
 Total cost: $10.46.
 
-These are the exact prompts — split into three phases that match
-the video. Swap in your own business details wherever you see `[brackets]`.
+A developer would have charged $5,000–$10,000 for the same result.
 
-**Phase 1 — Planning** runs in Claude.ai (the regular chat).
-**Phase 2 — Building** runs in Claude Code (the terminal builder).
-**Phase 3 — Quality** runs back in Claude.ai before you launch.
+These are the exact 9 prompts — organized by the 6 steps in the video.
+7 are covered in the video. 2 are bonus prompts not in the video
+but absolutely worth using. Marked with ⭐
+
+Swap in your own business details wherever you see `[brackets]`.
+
+Set your model to **Sonnet at Medium effort** for all planning prompts.
+Bottom right of the Claude.ai chat window.
 
 ---
 
-## PHASE 1 — PLANNING
-*Use these in Claude.ai before you touch any building tools.*
+## STEP 1 — PLAN YOUR SITE
+*Use these in Claude.ai (the regular chat — free to start, nothing to install).*
 *This is your strategy and design session. Don't skip it.*
+
+**Tip 1: Role Prompting** — give AI an expertise hat before it touches anything.
+**Tip 2: Context Front-Loading** — the more specific your answers, the more specific the output.
 
 ---
 
 ### Prompt 1 — The Kickoff Prompt (Role Prompting)
-*The very first thing you send. Gives AI an expertise hat before it
-touches anything. The difference between a generic site and one that
-actually looks like your business.*
+*The very first thing you send. The difference between a template
+and something that actually looks like your business.*
 
 ```
 I need to build a website for [describe your business in one sentence].
@@ -54,7 +60,7 @@ Once I've answered, give me 3 distinct design directions — not
 just color options, but full creative concepts with different
 visual personalities, layouts, and emotional tones. For each
 one tell me: the vibe, the tech approach, the standout feature,
-and which type of customer it would convert best.
+and which type of customer it would actually convert.
 
 Then ask me which direction I want to pursue before building
 anything.
@@ -62,9 +68,9 @@ anything.
 
 ---
 
-### Prompt 2 — The Competitive Research Prompt
-*Optional but powerful. Gets AI to think strategically about your
-market before designing anything.*
+### Prompt 2 — The Competitive Research Prompt (Context Front-Loading)
+*Gets AI to think strategically about your market before designing.
+If you don't have reference sites you love, ask Claude to recommend some.*
 
 ```
 Before we finalize the design direction, research 5 high-end
@@ -82,7 +88,7 @@ it could own visually.
 
 ---
 
-### Prompt 3 — The Hero Headline Prompt
+### Prompt 3 — The Hero Headline Prompt ⭐ BONUS — not in the video
 *Gets you a homepage headline that actually converts.*
 
 ```
@@ -98,29 +104,48 @@ Then tell me which one you'd A/B test first and why.
 
 ---
 
-### Prompt 4 — The Brief Handoff Prompt (Context Front-Loading)
-*Use this to hand off from Claude.ai planning to Claude Code building.
-This is the blueprint your builder works from. Do not skip this —
-it's the difference between a clean build and a chaotic one.*
+## STEP 2 — BUILD THE BRIEF
+*Still in Claude.ai. Run this at the END of your planning session
+before you close the chat.*
+
+---
+
+### Prompt 4 — The Brief Compilation Prompt
+*Compiles everything into one document — your blueprint for the build.
+Save it as brief.md in your project folder.*
 
 ```
-I have a project brief for this build. Read it completely.
-Also read [list any reference files — e.g. design spec, brand
-kit, example sites] for visual reference.
+Based on everything we've discussed in this planning session,
+compile a complete project brief I can hand off to Claude Code
+to build this site.
 
-Once you've read everything, produce a detailed site plan:
-- Tech stack recommendation
-- File structure
-- Component breakdown
-- Phased build order
+Include:
+- Business overview and brand personality
+- Chosen design direction and visual style
+- Tech stack (Next.js, GitHub, Vercel)
+- Site structure and pages needed
+- Key components and features
+- Copy tone and voice guidelines
 
-Do not write any code until I approve the plan.
+Format it clearly so a builder can follow it
+without any additional context.
 ```
 
 ---
 
-### Prompt 4B — The Setup Prompt
-*Important: specify your hosting stack before running this prompt. The setup steps will be different depending on where your site lives. If you're following along with this video, copy the prompt exactly as written — it matches the stack used to build builtwithspring.com." Run this in Claude.ai BEFORE opening Claude Code for the first time.*
+## STEP 3 — SET UP YOUR TERMINAL
+*Still in Claude.ai — run this in a FRESH chat before opening Claude Code.*
+*Claude.ai generates your setup instructions. You follow them in terminal.*
+
+*Before running this prompt:*
+- *If starting from scratch: create a free GitHub account (github.com) and free Vercel account (vercel.com). Two minutes each.*
+- *If you already have a hosting provider: tell Claude what you're using instead.*
+
+---
+
+### Prompt 5 — The Setup Prompt
+*Generates step-by-step setup instructions in plain English
+for your specific machine and stack.*
 
 ```
 This is my first time using Claude Code on my Mac.
@@ -137,16 +162,17 @@ by step. Don't skip anything.
 
 ---
 
-## PHASE 2 — BUILDING
-*Use this inside Claude Code terminal after your plan is approved.*
-*When Claude Code is running — let it run. It problem-solves on its
-own. It will ask you when it needs you. Until then: let it cook.*
+## STEP 4 — START YOUR BUILD
+*Now you're in Claude Code terminal.*
+*Type claude to open it. Paste your brief.md file reference as your first message.*
+*When Claude Code is running — let it run.*
+*To switch models: type /model in terminal.*
 
 ---
 
-### Prompt 5 — The Error Recovery Prompt
+### Prompt 6 — The Error Recovery Prompt
 *When things break — and they will — you don't need to understand
-the error. You just need this prompt.*
+the error. Use this as many times as needed.*
 
 ```
 I got this error: [paste the error text or describe what
@@ -161,14 +187,14 @@ to do.
 
 ---
 
-## PHASE 3 — QUALITY
-*Run these in Claude.ai after the site is built but before you launch.*
-*This is the Iterative Quality Loop — the move most people skip.*
-*Don't ask "is this good?" Ask AI to define what good means — then grade.*
+## STEP 5 — QUALITY CHECK BEFORE LAUNCH
+*Back in Claude.ai. Run these before you push anything live.*
+*This is the Iterative Quality Loop — the step most people skip.*
+*Never ask "is this good?" Ask AI to define what good means — then grade.*
 
 ---
 
-### Prompt 6 — Build the Grading Rubric First
+### Prompt 7 — Build the Grading Rubric First
 *Always build the rubric before you grade. Never the other way around.*
 
 ```
@@ -194,8 +220,9 @@ of 10.
 
 ---
 
-### Prompt 7 — The Honest Roast
-*Gets the most actionable feedback. AI will not hold back.*
+### Prompt 8 — The Honest Roast ⭐ BONUS — not in the video
+*Gets the most brutally honest feedback. Run after the rubric
+grade for a completely different perspective.*
 
 ```
 Now I want you to be brutally honest. Forget being nice.
@@ -211,8 +238,9 @@ Give me the unfiltered version.
 
 ---
 
-### Prompt 8 — The Priority Fix List
-*Turns the feedback into a ranked action plan with implementation prompts.*
+### Prompt 9 — The Priority Fix List
+*Turns feedback into a ranked action plan with the exact prompts
+to paste into Claude Code for each fix.*
 
 ```
 Based on everything you just flagged, give me the top 3
@@ -227,28 +255,31 @@ For each fix tell me:
 
 ---
 
-## The Full Order (Don't Skip Steps)
+## STEP 6 — IMPROVE YOUR SITE AFTER LAUNCH
+*The site you launch doesn't have to be the site you keep.*
+*Any time you want to add something new — same process.*
+*No new prompts needed. No new skills required.*
 
-**Phase 1 — Planning (Claude.ai):**
-1. Prompt 1 → Kickoff + discovery questions (Role Prompting)
-2. Prompt 2 → Competitive research (optional but powerful)
-3. Prompt 3 → Hero headline options
-4. Prompt 4 → Brief handoff to Claude Code (Context Front-Loading)
-5. Prompt 4B → Setup instructions for your machine
+1. Describe what you want in Claude.ai
+2. Grade the idea using the same rubric process
+3. Ask Claude for the build prompt
+4. Paste it into Claude Code terminal
+5. Let it cook
 
-**Phase 2 — Building (Claude Code):**
-6. Prompt 5 → Use as needed when errors appear
-   *Important: let Claude Code run without interrupting it.*
-   *It problem-solves on its own. Let it cook.*
+---
 
-**Phase 3 — Quality (Claude.ai):**
-7. Prompt 6 → Build the grading rubric
-8. Prompt 7 → The honest roast
-9. Prompt 8 → Priority fix list
+## Prompt Order Summary
 
-Take the fixes back into Claude Code, implement them,
-and run the quality loop again. I ran it twice.
-The site you see at builtwithspring.com is version 3.
+| Step | What You're Doing | Prompt | Tool |
+|------|-------------------|--------|------|
+| Step 1 | Plan your site | Prompts 1 + 2 | Claude.ai |
+| Step 1 bonus | Hero headline | Prompt 3 ⭐ | Claude.ai |
+| Step 2 | Build the brief | Prompt 4 | Claude.ai |
+| Step 3 | Set up terminal | Prompt 5 | Claude.ai |
+| Step 4 | Build the site | Prompt 6 | Claude Code |
+| Step 5 | Quality check | Prompts 7 + 9 | Claude.ai |
+| Step 5 bonus | Honest roast | Prompt 8 ⭐ | Claude.ai |
+| Step 6 | Improve after launch | No new prompts | Both |
 
 ---
 
@@ -256,14 +287,27 @@ The site you see at builtwithspring.com is version 3.
 
 | Tool | Role | Cost |
 |------|------|------|
-| [Claude.ai](https://claude.ai) | Planning, design, quality review — the architect | Free / $20/mo Pro |
-| [Claude Code](https://claude.ai/download) | Builds and runs the actual code — the construction crew | Included with Pro |
+| [Claude.ai](https://claude.ai) | Planning, design, quality review — the architect | Free to start |
+| [Claude Code](https://claude.ai/download) | Builds and runs the actual code — the construction crew | Claude Pro $20/mo |
 | [GitHub](https://github.com) | Version control | Free |
 | [Vercel](https://vercel.com) | Deploys your site live | Free |
 | [Cloudflare](https://cloudflare.com/products/registrar) | Domain registrar | ~$10/yr |
 
 **Total cost to launch: ~$10.46 + one Sunday afternoon.**
 *(A developer would have charged $5,000–$10,000 for the same result.)*
+
+---
+
+## Model Settings
+
+**For all planning and setup prompts (Steps 1–3):**
+Sonnet · Medium effort
+Bottom right of the Claude.ai chat window.
+
+**When something breaks and you've tried twice (Step 4):**
+Switch to Opus · High effort
+Type /model in the Claude Code terminal to switch.
+Switch back to Sonnet once it's fixed.
 
 ---
 
@@ -279,5 +323,8 @@ and share every build as a free tutorial — no coding background required.
 
 ---
 
-*Found this useful? Star the repo and drop your business name
-in the YouTube comments — I'll tell you which design direction I'd take it.*
+*7 prompts covered in the video + 2 bonus ones marked ⭐*
+*All free. Steal them. Build something.*
+
+*Drop your business name in the YouTube comments —
+I'll tell you which design direction I'd take it.*
