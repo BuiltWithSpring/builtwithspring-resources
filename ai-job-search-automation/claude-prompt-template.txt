@@ -1,0 +1,67 @@
+I am setting up an automated job search system that scores LinkedIn job 
+listings against my resume using AI. I need you to write a scoring prompt 
+I can paste into a spreadsheet cell.
+
+I have attached my resume. Please use it to fill in the resume section below.
+
+Keep the company research criteria, scoring rubric, JSON format, and the 
+final "Jobs to score:" line exactly as written. Only replace the sections 
+marked with [FILL IN].
+
+---TEMPLATE---
+
+You are helping [FILL IN YOUR FULL NAME] with their job search. They are a 
+[FILL IN YOUR JOB TITLE] with [FILL IN YEARS OF EXPERIENCE] years in 
+[FILL IN YOUR INDUSTRY]. Their resume includes:
+- [Claude will fill this in from your attached resume]
+- [Claude will fill this in from your attached resume]
+- [Claude will fill this in from your attached resume]
+- Deep expertise in [Claude will fill this in from your attached resume]
+- Tools: [Claude will fill this in from your attached resume]
+
+Target roles: [FILL IN YOUR TARGET JOB TITLES]
+Target companies: [FILL IN COMPANY STAGE — e.g. Series B-D B2B SaaS, 
+MarTech, or AI-powered platforms]
+Target comp: [FILL IN YOUR COMP RANGE — e.g. $130K-$160K+]
+Location: [FILL IN YOUR LOCATION — e.g. US remote, Austin TX hybrid]
+
+For each job, assess the following from your training knowledge:
+- Funding stage and total raised (Crunchbase data)
+- Glassdoor rating and any notable culture/leadership concerns
+- Recent news: layoffs, leadership changes, acquisitions, growth signals
+- Headcount trajectory: growing, stable, or shrinking
+- Any red flags: poor reviews, recent RIFs, unstable leadership
+- Role fit against their resume — required skills only, not nice-to-haves
+
+Score using these criteria:
+🟢 GREEN: Glassdoor 3.8+ — role matches target titles — comp likely in 
+range — location matches — all KEY required skills match resume. 
+Nice-to-haves do not need to match.
+🟡 YELLOW: Strong role fit but weaker company signals OR strong company 
+but has required skills they do not have OR limited public info available
+🔴 RED: Poor role fit, Glassdoor below 3.5, declining company, recent 
+layoffs, role too junior/senior, or wrong industry
+
+Return ONLY a valid JSON array, no markdown, no code blocks, no preamble:
+[{"score":"🟢","details":"Glassdoor 4.1, Series C $45M raised, no recent 
+layoffs, headcount growing 20% YoY. Strong fit for target role, 
+remote-friendly."},...]
+
+One object per job in exact input order. Details: 2-3 sentences covering 
+Glassdoor, funding, red flags if any, and fit reasoning. Note uncertainty 
+briefly.
+
+Jobs to score:
+
+---END TEMPLATE---
+
+My target roles are: [FILL IN YOUR TARGET JOB TITLES]
+My target companies are: [FILL IN COMPANY STAGE — e.g. Series B-D B2B SaaS, 
+MarTech, or AI-powered platforms]
+My target comp range is: [FILL IN YOUR RANGE — e.g. $130K-$160K+]
+My location preference is: [FILL IN YOUR LOCATION — e.g. US remote, 
+San Franciso CA hybrid]
+
+Please write the complete prompt replacing the [FILL IN] sections with my 
+details from my attached resume. Keep everything else exactly as written 
+including the final "Jobs to score:" line — do not add anything after it.
